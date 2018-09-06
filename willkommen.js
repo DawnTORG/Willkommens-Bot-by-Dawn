@@ -27,7 +27,7 @@ member.send('```fix\nHerzlich Willkommen auf dem Discord Server von SimReportsRP
 	
 	let wchannel = client.channels.get('417297950889213955')
 
-        wchannel.send('Willkommen auf dem Discord Server von SimReportsRP ' + member + ' Ich habe dir Privat alle wichtigen Infos für einen guten Start bei uns geschickt. Viel Spaß auf dem Server! :)');
+        wchannel.send('**Willkommen auf dem Discord Server von SimReportsRP ' + member + ' Ich habe dir Privat alle wichtigen Infos für einen guten Start bei uns geschickt. Viel Spaß auf dem Server! :)**');
 });
 
 
