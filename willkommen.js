@@ -20,8 +20,8 @@ client.on('message', message => {
 		let dchannel = client.channels.get('417297950889213955')
 		
 	    var embed = new Discord.RichEmbed()
-		    .addField('----Spenden Update----', 'Es wurden 30€/60€ für die Serverkosten dieses Monats gesammelt')
-            .addField('Gespendet haben:', 'AVI (30€), ')	
+		    .addField('----Spenden Update----', 'Es wurden 40€/60€ für die Serverkosten dieses Monats gesammelt')
+            .addField('Gespendet haben:', 'AVI (30€), Drantox (10€)')	
 			.setColor('RED')
          dchannel.sendEmbed(embed)
 	}
@@ -37,8 +37,8 @@ client.on('message', message => {
     var interval = setInterval (function () {
         
 		var embed = new Discord.RichEmbed()
-		    .addField('----Spenden Update----', 'Es wurden 30€/60€ für die Serverkosten dieses Monats gesammelt')
-            .addField('Gespendet haben:', 'AVI (30€), ')	
+		    .addField('----Spenden Update----', 'Es wurden 40€/60€ für die Serverkosten dieses Monats gesammelt')
+            .addField('Gespendet haben:', 'AVI (30€), Drantox (10€)')	
 			.setColor('RED')
         dchannel.sendEmbed(embed)
 		}, 50000 * 1000);
