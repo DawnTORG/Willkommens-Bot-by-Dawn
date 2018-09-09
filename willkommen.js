@@ -14,6 +14,36 @@ client.on('message', message => {
 	{
 		message.delete();
 	}
+	
+		else if(message.content.toLowerCase() === prefix + 'goal'){
+		
+		let dchannel = client.channels.get('417297950889213955')
+		
+	    var embed = new Discord.RichEmbed()
+		    .addField('----Spenden Update----', 'Es wurden 30€/60€ für die Serverkosten dieses Monats gesammelt')
+            .addField('Gespendet haben:', 'AVI (30€), ')	
+			.setColor('RED')
+         dchannel.sendEmbed(embed)
+	}
+		
+	else if(message.content.toLowerCase() === prefix + 'init')
+  {
+	let dchannel = client.channels.get('417297950889213955')
+    //var d = new Date();
+    //var n = d.getHours();
+	
+    message.channel.send("Donation goal startet...");
+	
+    var interval = setInterval (function () {
+        
+		var embed = new Discord.RichEmbed()
+		    .addField('----Spenden Update----', 'Es wurden 30€/60€ für die Serverkosten dieses Monats gesammelt')
+            .addField('Gespendet haben:', 'AVI (30€), ')	
+			.setColor('RED')
+        dchannel.sendEmbed(embed)
+		}, 50000 * 1000);
+
+  }
 });
 
 client.on('guildMemberAdd', member => {
