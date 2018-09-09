@@ -5,6 +5,7 @@ const prefix = "!";
 
 client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")
+	bot.user.setActivity('SimReportsRP FiveM');
 });
 
 
