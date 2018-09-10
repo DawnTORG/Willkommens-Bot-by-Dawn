@@ -73,7 +73,7 @@ client.on('guildMemberAdd', member => {
 
 		.addField('Willkommen auf dem Discord-Server von SimReportsRP', 'Ich habe dir Privat alle Infos für einen guten Start bei uns geschickt.' + member)
 		
-		.setColor('RED')
+		.setColor('GREEN')
 		
 	wchannel.sendEmbed(embed);
 	
