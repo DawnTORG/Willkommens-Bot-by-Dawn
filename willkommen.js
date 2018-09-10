@@ -62,7 +62,7 @@ client.on('guildMemberAdd', member => {
 
 		.addField('Viel Spaß', 'Wünscht dir dein SimReportsRP Team')
 		
-		.setColor('RED')
+		.setColor('GREEN')
 		
 	member.sendEmbed(embed);
 	
