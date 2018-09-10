@@ -41,7 +41,7 @@ client.on('message', message => {
             .addField('Gespendet haben:', 'AVI (30€), Drantox (10€)')	
 			.setColor('RED')
         dchannel.sendEmbed(embed)
-		}, 50000 * 1000);
+		}, 35000 * 1000);
 
   }
 });
