@@ -43,7 +43,7 @@ client.on('message', message => {
 	.addField(':fire: Die Serverkosten für diesen Monat sind gedeckt :fire:', ':fire: Alle weiteren Spenden werden für neue Fahrzeuge genutzt :fire: ')
 			.setColor('RED')
         dchannel.sendEmbed(embed)
-		}, 35000 * 1000);
+		}, 40000 * 1000);
 
   }
 });
