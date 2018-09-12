@@ -35,7 +35,7 @@ client.on('message', message => {
 	
     message.channel.send("Donation goal startet...");
 	
-    var interval = setInterval (function () {
+    var interval = setInterval (function () { 
         
 		var embed = new Discord.RichEmbed()
 		    .addField('----Spenden Update----', 'Es wurden 60€/60€ für die Serverkosten dieses Monats gesammelt')
