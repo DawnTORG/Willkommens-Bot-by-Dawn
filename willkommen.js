@@ -21,7 +21,7 @@ client.on('message', message => {
 		
 	    var embed = new Discord.RichEmbed()
 		        .addField('----Spenden Update----', 'Es wurden 60€/60€ für die Serverkosten dieses Monats gesammelt')
-                        .addField('Gespendet haben:', 'AVI (30€), Drantox (10€), Lukas (20€)')	
+                        .addField('Gespendet haben:', 'AVI (30€), Drantox (10€), Lukas (20€), MCCybershot | Dannie (36,06€)')	
 			.addField(':fire: Die Serverkosten für diesen Monat sind gedeckt :fire:', ':fire: Alle weiteren Spenden werden für neue Fahrzeuge genutzt :fire:')
 			.setColor('RED')
 	     dchannel.sendEmbed(embed)
