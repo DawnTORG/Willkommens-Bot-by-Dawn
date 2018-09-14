@@ -20,9 +20,9 @@ client.on('message', message => {
 		let dchannel = client.channels.get('417297950889213955')
 		
 	    var embed = new Discord.RichEmbed()
-		        .addField('----Spenden Update----', 'Es wurden 60€/60€ für die Serverkosten dieses Monats gesammelt')
-                        .addField('Gespendet haben:', 'AVI (30€), Drantox (10€), Lukas (20€), MCCybershot | Dannie (36,06€)')	
-			.addField(':fire: Die Serverkosten für diesen Monat sind gedeckt :fire:', ':fire: Alle weiteren Spenden werden für neue Fahrzeuge genutzt :fire:')
+		        .addField('----Spenden Update----', 'Wir freuen uns über jede Spende die wir bekommen :)')
+                        .addField('Danke an alle Spender!:', 'AVI, Drantox, Lukas, MCCybershot | Dannie')	
+			.addField(':fire:  :fire:', ':fire: Vielen Danke an alle Spender die diesen Server unterstützen :fire:')
 			.setColor('RED')
 	     dchannel.sendEmbed(embed)
 	}
@@ -38,10 +38,10 @@ client.on('message', message => {
     var interval = setInterval (function () { 
         
 		var embed = new Discord.RichEmbed()
-		    .addField('----Spenden Update----', 'Es wurden 60€/60€ für die Serverkosten dieses Monats gesammelt')
-            .addField('Gespendet haben:', 'AVI (30€), Drantox (10€), Lukas (20€), MCCybershot | Dannie (36,06€)')	
-	.addField(':fire: Die Serverkosten für diesen Monat sind gedeckt :fire:', ':fire: Alle weiteren Spenden werden für neue Fahrzeuge genutzt :fire: ')
-			.setColor('RED')
+		        .addField('----Spenden Update----', 'Wir freuen uns über jede Spende die wir bekommen :)')
+                        .addField('Danke an alle Spender!:', 'AVI, Drantox, Lukas, MCCybershot | Dannie')	
+			.addField(':fire:  :fire:', ':fire: Vielen Danke an alle Spender die diesen Server unterstützen :fire:')
+	       .setColor('RED')
         dchannel.sendEmbed(embed)
 		}, 48000 * 1000);
 
