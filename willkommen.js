@@ -33,14 +33,14 @@ client.on('message', message => {
     //var d = new Date();
     //var n = d.getHours();
 	
-    message.channel.send("Donation goal startet...");
+    message.channel.send("Donation wurde gestartet");
 	
     var interval = setInterval (function () { 
         
 		var embed = new Discord.RichEmbed()
 		        .addField('----Spenden Update----', 'Wir freuen uns über jede Spende die wir bekommen :)')
                         .addField('Danke an alle Spender!:', 'AVI, Drantox, Lukas, MCCybershot | Dannie')	
-			.addField(':fire:  :fire:', ':fire: Vielen Danke an alle Spender die diesen Server unterstützen :fire:')
+			.addField(':star: :star: :star: :star: :star: :star: ', ':fire: Vielen Danke an alle Spender die diesen Server unterstützen :fire:')
 	       .setColor('RED')
         dchannel.sendEmbed(embed)
 		}, 48000 * 1000);
