@@ -4,15 +4,16 @@ const client = new Discord.Client();
 const prefix = "!";
 
 client.on('ready', () => {
-	console.log("Bot jetzt angeschaltet\n\n")
+	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
+		client.user.setActivity('By Dawn')         //Activity
 });
 
 
-client.on('message', message => {
+client.on('message', message => {            //Liest nachrichten
 	
 	if(message.content.startsWith('Now playing'))
 	{
-		message.delete();
+		message.delete();                                     //Musik Bot Nachrichten löschen
 	}
 	
 		else if(message.content.toLowerCase() === prefix + 'goal'){
@@ -48,7 +49,7 @@ client.on('message', message => {
   }
 });
 
-client.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	
 	let wchannel = client.channels.get('417297950889213955')
 		
@@ -66,7 +67,7 @@ client.on('guildMemberAdd', member => {
 		
 		.setColor('GREEN')
 		
-	member.sendEmbed(embed);
+	member.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
 	
 
 	member.addRole('470449935700066305')
@@ -77,9 +78,8 @@ client.on('guildMemberAdd', member => {
 		
 		.setColor('GREEN')
 		
-	wchannel.sendEmbed(embed);
+	wchannel.sendEmbed(embed);                   //Nachricht mit join info (Server)
 	
 });
 
-
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);          //Mit token eingloggen (Heroku)
