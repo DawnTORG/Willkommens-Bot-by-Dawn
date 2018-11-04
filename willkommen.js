@@ -5,7 +5,6 @@ const prefix = "!";
 
 client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
-	client.user.setActivity('By Dawn');
 });
 
 
