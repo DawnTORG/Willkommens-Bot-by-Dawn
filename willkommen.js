@@ -5,6 +5,7 @@ const prefix = "!";
 
 client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
+	client.user.setGame('By Dawn')
 });
 
 
@@ -52,11 +53,6 @@ client.on('message', message => {            //Liest nachrichten
 	  	let dchannel = client.channels.get('417297950889213955')
     //var d = new Date();
     //var n = d.getHours();
-	
-				var embed = new Discord.RichEmbed()
-	       .setDescription('Unsere TS3 IP ist srb.zap-ts3.com, schau doch mal vorbei! :grinning:')
-		   .setColor('ORANGE')
-	  dchannel.sendEmbed(embed)
 		
     message.channel.send("TS wurde mit interval 50000*1000 gestartet (Korrekturen werden noch vorgenommen)");
 	
@@ -75,11 +71,6 @@ client.on('message', message => {            //Liest nachrichten
 	  	let dchannel = client.channels.get('417297950889213955')
     //var d = new Date();
     //var n = d.getHours();
-	
-				var embed = new Discord.RichEmbed()
-	       .setDescription('Unsere FiveM Server IP ist 134.255.220.207:30120, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :grinning:')
-		   .setColor('ORANGE')
-	  dchannel.sendEmbed(embed)
 		
     message.channel.send('Fivem wurde mit interval 50000*1000 gestartet (Korrekturen werden noch vorgenommen)');
 	
