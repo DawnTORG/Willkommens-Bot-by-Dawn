@@ -14,74 +14,30 @@ client.on('message', message => {            //Liest nachrichten
 	{
 		message.delete();                                     //Musik Bot Nachrichten löschen
 	}
+		
 	
-		else if(message.content.toLowerCase() === prefix + 'goal'){
+	else if(message.content.toLowerCase() === prefix + 'info'){
+	  
+	  	let dchannel = client.channels.get('417297950889213955')
+    //var d = new Date();
+    //var n = d.getHours();
 		
-		let dchannel = client.channels.get('417297950889213955')
-		
+    message.channel.send("TS wurde mit interval 80000*1000 gestartet (Korrekturen werden noch vorgenommen)");
+	
+    var interval = setInterval (function () { 
+        
+	   var embed = new Discord.RichEmbed()
+	           .setDescription('Unsere TS3 IP ist srb.zap-ts3.com, schau doch mal vorbei! :grinning:')
+		   .setColor('ORANGE')
+	  dchannel.sendEmbed(embed)
+	    
 	    var embed = new Discord.RichEmbed()
-		        .addField('----Spenden Update----', 'Wir freuen uns über jede Spende die wir bekommen :)')
-                        .addField('Danke an alle Spender!:', 'AVI, Drantox, Lukas, MCCybershot | Dannie')	
-			.addField(':star: :star: :star: :star: :star: :star: ', ':fire: Vielen Danke an alle Spender die diesen Server unterstützen :fire:')
-			.setColor('RED')
-	     dchannel.sendEmbed(embed)
+	           .setDescription('Unsere FiveM Server IP ist 134.255.220.108:32024, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :grinning:')
+		   .setColor('ORANGE')
+	  dchannel.sendEmbed(embed)
+	  
+		}, 80000 * 1000);
 	}
-		
-	else if(message.content.toLowerCase() === prefix + 'init')
-  {
-	let dchannel = client.channels.get('417297950889213955')
-    //var d = new Date();
-    //var n = d.getHours();
-	
-    message.channel.send("Donation wurde gestartet");
-	
-    var interval = setInterval (function () { 
-        
-		var embed = new Discord.RichEmbed()
-		        .addField('----Spenden Update----', 'Wir freuen uns über jede Spende die wir bekommen :)')
-                        .addField('Danke an alle Spender!:', 'AVI, Drantox, Lukas, MCCybershot | Dannie')	
-			.addField(':star: :star: :star: :star: :star: :star: ', ':fire: Vielen Danke an alle Spender die diesen Server unterstützen :fire:')
-	       .setColor('RED')
-        dchannel.sendEmbed(embed)
-		}, 48000 * 1000);
-
-  }
-	
-	  else if(message.content.toLowerCase() === prefix + 'ts'){
-	  
-	  	let dchannel = client.channels.get('417297950889213955')
-    //var d = new Date();
-    //var n = d.getHours();
-		
-    message.channel.send("TS wurde mit interval 50000*1000 gestartet (Korrekturen werden noch vorgenommen)");
-	
-    var interval = setInterval (function () { 
-        
-		var embed = new Discord.RichEmbed()
-	       .setDescription('Unsere TS3 IP ist srb.zap-ts3.com, schau doch mal vorbei! :grinning:')
-		   .setColor('ORANGE')
-	  dchannel.sendEmbed(embed)
-	  
-		}, 80000 * 1000);
-  }
-  
-    else if(message.content.toLowerCase() === prefix + 'fivem'){
-	  
-	  	let dchannel = client.channels.get('417297950889213955')
-    //var d = new Date();
-    //var n = d.getHours();
-		
-    message.channel.send('Fivem wurde mit interval 50000*1000 gestartet (Korrekturen werden noch vorgenommen)');
-	
-    var interval = setInterval (function () {
-        
-		var embed = new Discord.RichEmbed()
-	       .setDescription('Unsere FiveM Server IP ist 134.255.220.108:32024, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :grinning:')
-		   .setColor('ORANGE')
-	  dchannel.sendEmbed(embed)
-	  
-		}, 80000 * 1000);
-  }
 	
 });
 
