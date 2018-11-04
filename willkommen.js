@@ -62,7 +62,7 @@ client.on('message', message => {            //Liest nachrichten
 		   .setColor('ORANGE')
 	  dchannel.sendEmbed(embed)
 	  
-		}, 50000 * 1000);
+		}, 80000 * 1000);
   }
   
     else if(message.content.toLowerCase() === prefix + 'fivem'){
@@ -76,11 +76,11 @@ client.on('message', message => {            //Liest nachrichten
     var interval = setInterval (function () {
         
 		var embed = new Discord.RichEmbed()
-	       .setDescription('Unsere FiveM Server IP ist 134.255.220.207:30120, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :grinning:')
+	       .setDescription('Unsere FiveM Server IP ist 134.255.220.108:32024, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :grinning:')
 		   .setColor('ORANGE')
 	  dchannel.sendEmbed(embed)
 	  
-		}, 50000 * 1000);
+		}, 80000 * 1000);
   }
 	
 });
