@@ -77,7 +77,7 @@ client.on('message', message => {            //Liest nachrichten
     //var n = d.getHours();
 	
 				var embed = new Discord.RichEmbed()
-	       .setDescription('Unsere FiveM Server IP ist 134.255.220.207:30120, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :logorp:')
+	       .setDescription('Unsere FiveM Server IP ist 134.255.220.207:30120, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :grinning:')
 		   .setColor('ORANGE')
 	  dchannel.sendEmbed(embed)
 		
@@ -86,7 +86,7 @@ client.on('message', message => {            //Liest nachrichten
     var interval = setInterval (function () {
         
 		var embed = new Discord.RichEmbed()
-	       .setDescription('Unsere FiveM Server IP ist 134.255.220.207:30120, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :logorp:')
+	       .setDescription('Unsere FiveM Server IP ist 134.255.220.207:30120, oder einfach nach Simreports suchen. Viel Spaß beim Spielen! :grinning:')
 		   .setColor('ORANGE')
 	  dchannel.sendEmbed(embed)
 	  
