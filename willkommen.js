@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.user.setGame('By Dawn')
+client.user.setActivity('By Dawn');
 
 const prefix = "!";
 
