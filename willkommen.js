@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+client.user.setGame('By Dawn')
 
 const prefix = "!";
 
 client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
-	client.user.setGame('By Dawn')
 });
 
 
