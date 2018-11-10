@@ -37,33 +37,7 @@ client.on('message', async message => {            //Liest nachrichten
 	  dchannel.sendEmbed(embed)
 	  
 		}, 80000 * 1000);
-	}	
-	
-			  const args = message.content.split(' ');
-		  
-		 else if(message.content.startsWith(prefix + 'play')){
-			  const voiceChannel = message.member.voiceChannel;
-			  
-			  if(!voiceChannel) return message.channel.send('Dafür musst du in einem Sprach-Chat sein!');
-			  
-			  const permissions = voiceChannel.permissionsFor(message.client.user);
-			  if(!permissions.has('CONNECT')){
-				  return message.channel.send('Ich kann nicht beitrete, weil ich keine Berechtigung dazu habe!');
-			  }
-			  if(!permissions.has('SPEAK')) {
-				  return message.channel.send('Ich kann nicht reden, weil ich keine Berechtigung dazu habe!');
-			  }
-			  
-			  var connection = await voiceChannel.join();
-			  
-			  const dispatcher = connection.playStream(ytdl(args[1]));
-		  dispatcher.setVolumeLogarithmic(5 / 5)
-		  }
-		 else if(message.content.toLowerCase() === prefix + 'stop'){
-			  			  const voiceChannel = message.member.voiceChannel;
-						  voiceChannel.leave();
-		  }
-	
+	}
 
 });
 
