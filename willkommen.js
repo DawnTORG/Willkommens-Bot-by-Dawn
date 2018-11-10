@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({disableEveryone: true});
+const ytdl = require('ytdl-core');
 
 const prefix = "!";
 
@@ -7,7 +8,7 @@ client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
 });
 
-client.on('message', message => {            //Liest nachrichten
+client.on('message', async message => {            //Liest nachrichten
 	
 	if(message.content.startsWith('Now playing'))
 	{
@@ -37,6 +38,33 @@ client.on('message', message => {            //Liest nachrichten
 	  
 		}, 80000 * 1000);
 	}	
+	
+	         else if(message.author.bot) return;
+		  
+		  const args = message.content.split(' ');
+		  
+		  if(message.content.startsWith(prefix + 'play')){
+			  const voiceChannel = message.member.voiceChannel;
+			  
+			  if(!voiceChannel) return message.channel.send('Dafür musst du in einem Sprach-Chat sein!');
+			  
+			  const permissions = voiceChannel.permissionsFor(message.client.user);
+			  if(!permissions.has('CONNECT')){
+				  return message.channel.send('Ich kann nicht beitrete, weil ich keine Berechtigung dazu habe!');
+			  }
+			  if(!permissions.has('SPEAK')) {
+				  return message.channel.send('Ich kann nicht reden, weil ich keine Berechtigung dazu habe!');
+			  }
+			  
+			  var connection = await voiceChannel.join();
+			  
+			  const dispatcher = connection.playStream(ytdl(args[1]));
+		  dispatcher.setVolumeLogarithmic(5 / 5)
+		  }
+		 else if(message.content.toLowerCase() === prefix + 'stop'){
+			  			  const voiceChannel = message.member.voiceChannel;
+						  voiceChannel.leave();
+		  }
 });
 
 client.on('guildMemberAdd', member => {                 //wenn user beitritt
