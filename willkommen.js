@@ -40,37 +40,6 @@ client.on('message', message => {            //Liest nachrichten
 	}	
 });
 
-client.on('message', async msg => {
-	
-          if(msg.author.bot) return;
-		  
-		  const args = msg.content.split(' ');
-		  
-		  if(msg.content.startsWith(prefix + 'play')){
-			  const voiceChannel = msg.member.voiceChannel;
-			  
-			  if(!voiceChannel) return msg.channel.send('Dafür musst du in einem Sprach-Chat sein!');
-			  
-			  const permissions = voiceChannel.permissionsFor(msg.client.user);
-			  if(!permissions.has('CONNECT')){
-				  return msg.channel.send('Ich kann nicht beitrete, weil ich keine Berechtigung dazu habe!');
-			  }
-			  if(!permissions.has('SPEAK')) {
-				  return msg.channel.send('Ich kann nicht reden, weil ich keine Berechtigung dazu habe!');
-			  }
-			  
-			  var connection = await voiceChannel.join();
-			  
-			  const dispatcher = connection.playStream(ytdl(args[1]));
-		  dispatcher.setVolumeLogarithmic(5 / 5)
-		  }
-		  if(msg.content.toLowerCase() === prefix + 'stop'){
-			  			  const voiceChannel = msg.member.voiceChannel;
-						  voiceChannel.leave();
-		  }
-						 
-	});
-
 client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	
 	let wchannel = client.channels.get('417297950889213955')
