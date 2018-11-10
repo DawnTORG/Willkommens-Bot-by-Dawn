@@ -39,11 +39,9 @@ client.on('message', async message => {            //Liest nachrichten
 		}, 80000 * 1000);
 	}	
 	
-	         else if(message.author.bot) return;
+			  const args = message.content.split(' ');
 		  
-		  const args = message.content.split(' ');
-		  
-		  if(message.content.startsWith(prefix + 'play')){
+		 else if(message.content.startsWith(prefix + 'play')){
 			  const voiceChannel = message.member.voiceChannel;
 			  
 			  if(!voiceChannel) return message.channel.send('Dafür musst du in einem Sprach-Chat sein!');
@@ -65,6 +63,8 @@ client.on('message', async message => {            //Liest nachrichten
 			  			  const voiceChannel = message.member.voiceChannel;
 						  voiceChannel.leave();
 		  }
+	
+
 });
 
 client.on('guildMemberAdd', member => {                 //wenn user beitritt
