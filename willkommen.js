@@ -22,7 +22,7 @@ client.on('message', message => {            //Liest nachrichten
 		if(message.author.bot)return;
 		
 		var embed = new Discord.RichEmbed()
-		    .addField('__**Ich störe mal kurz, hier sind alle wichtigen IPs etc.:**__', '*Unsere FiveM Server IP ist 134.255.220.108:32024, oder einfach nach Simreports suchen*\n\nUnsere TS3 IP ist srb.zap-ts3.com\n\nUnser Discord-Invite-Link ist https://discord.gg/eNcCHYA1\n\n**Viel Spaß noch auf SimReportsRP!**')
+		    .addField('__**Ich störe mal kurz, hier sind alle wichtigen IPs etc.:**__', '*Unsere FiveM Server IP ist 134.255.220.185:32024, oder einfach nach Simreports suchen*\n\nUnsere TS3 IP ist srb.zap-ts3.com\n\nUnser Discord-Invite-Link ist https://discord.gg/eNcCHYA1\n\n**Viel Spaß noch auf SimReportsRP!**')
 			.setColor('ORANGE')
 		wchannel.sendEmbed(embed)
 	}
