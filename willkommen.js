@@ -22,9 +22,9 @@ client.on('message', message => {            //Liest nachrichten
 		if(message.author.bot)return;
 		
 		var embed = new Discord.RichEmbed()
-		    .addField('__**Ich störe mal kurz, hier sind alle wichtigen IPs etc.:**__', '*Unsere FiveM Server IP ist 134.255.220.185:32024, oder einfach nach Simreports suchen*\n\nUnsere TS3 IP ist srb.zap-ts3.com\n\nUnser Discord-Invite-Link ist https://discord.gg/eNcCHYA1\n\n**Viel Spaß noch auf SimReportsRP!**')
+		    .addField(':earth_americas: __**Ich störe mal kurz, hier sind alle wichtigen IPs etc.:**__ :earth_americas:', ':arrow_right: *Unsere FiveM Server IP ist 134.255.220.185:32024, oder einfach nach Simreports suchen*\n\n:arrow_right: Unsere TS3 IP ist SRB.zap-ts3.com\n\n:arrow_right: Unser Discord-Invite-Link ist https://discord.gg/eNcCHYA1\n\n**:small_blue_diamond: Viel Spaß noch auf SimReportsRP!** :small_blue_diamond:\n@everyone')
 			.setColor('ORANGE')
-		wchannel.sendEmbed(embed)
+		wchannel.sendEmbed(embed)1
 	}
 
 });
@@ -35,15 +35,15 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		
     var embed = new Discord.RichEmbed()
 	    
-		.addField('Herzlich Willkommen auf dem Discord Server von SimReportsRP', 'Hier sind alle wichtigen Infos für einen guten Start bei uns:')
-		.addField('TeamSpeak 3 IP:', 'srb.zap-ts3.com ')
-		.addField('FiveM-Server IP:', '185.249.197.141:30120\nlink: https://servers.fivem.net/#/servers/detail/185.249.197.141:30120')
-		.addField('Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
-		.addField('Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
-		.addField('Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
-		.addField('Bei Fragen oder Problemen folgendes machen:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
+		.addField(':rotating_light: Herzlich Willkommen auf dem Discord Server von SimReportsRP :rotating_light: ', 'Hier sind alle wichtigen Infos für einen guten Start bei uns:')
+		.addField(':arrow_right: TeamSpeak 3 IP:', 'SRB.zap-ts3.com')
+		.addField(':arrow_right: FiveM-Server IP:', '185.249.197.141:30120\nlink: https://servers.fivem.net/#/servers/detail/185.249.197.141:30120')
+		.addField(':arrow_right: Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
+		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
+		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
+		.addField(':exclamation: Bei Fragen oder Problemen folgendes machen: :exclamation:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
 
-		.addField('Viel Spaß', 'Wünscht dir dein SimReportsRP Team')
+		.addField(':star: Viel Spaß :star:', 'Wünscht dir dein SimReportsRP Team')
 		
 		.setColor('GREEN')
 		
@@ -54,7 +54,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	
 	     var embed = new Discord.RichEmbed()
 
-		.addField(':fire: Willkommen auf dem Discord-Server von SimReportsRP :fire:', 'Ich habe dir Privat alle Infos für einen guten Start bei uns geschickt ' + member)
+		.addField(':fire: Willkommen auf dem Discord-Server von SimReportsRP :fire:', ':small_blue_diamond: Ich habe dir Privat alle Infos für einen guten Start bei uns geschickt :small_blue_diamond:' + member)
 		
 		.setColor('GREEN')
 		
