@@ -26,6 +26,27 @@ client.on('message', message => {            //Liest nachrichten
 			.setColor('ORANGE')
 		wchannel.sendEmbed(embed)
 	}
+	
+		let achannel = client.channels.get('517449527947427851')
+	
+	if(message.content.startsWith(prefix + 'admin')){
+		
+		message.delete();
+		
+		if(message.author.bot)return;
+		
+		nachricht = message.content.slice (6);
+			
+	var embed = new Discord.RichEmbed()
+	     .addField(':rotating_light: Ein User möchte anonym etwas melden. Hier ist das Problem: :rotating_light:', ':arrow_right: ' + nachricht)
+		 .setColor('RED')
+	achannel.sendEmbed(embed)
+	
+	var embed = new Discord.RichEmbed()
+	    .addField(':rotating_light: Bestätigung deiner Adminanfrage :rotating_light:', 'Deine Anfrage wurde anonym gesendet und ein Admin kümmert sich so schnell wie möglich darum!')
+		.setColor('RED')
+	message.author.sendEmbed(embed)
+	}
 
 });
 
