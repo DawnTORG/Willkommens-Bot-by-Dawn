@@ -32,13 +32,26 @@ client.on('message', message => {            //Liest nachrichten
 	if(message.content.startsWith(prefix + 'admin')){
 		
 		message.delete();
+
+	const banned = '';
+	let achannel = client.channels.get('517449527947427851')
+	
+	nachricht = message.content.slice (6);
+	
+	if(message.author.bot)return;
+	if(message.author.id === banned){
+		var embed = new Discord.RichEmbed(embed)
+		  .addField('Du wurdest von der anonymen Nachrichtenfunktion ausgeschlossen', 'Du wurdest vermutlich gebannt, da du die Regeln missachtest hast')
+		  .addField('Du denkst das ist zu unrecht?', 'Dann schreibe eine Nachricht in den Support-Channel und achte darauf, dass du die Uhrzeit deiner letzten Admin-Anfrage dazu schreibst.')
+		  .setColor('RED')
+		message.author.sendEmbed(embed)
 		
-		if(message.author.bot)return;
-		
-		nachricht = message.content.slice (6);
-			
+		return;
+	}
+	
 	var embed = new Discord.RichEmbed()
-	     .addField(':rotating_light: Ein User möchte anonym etwas melden. Hier ist das Problem: :rotating_light:', ':arrow_right: ' + nachricht)
+	     .addField('Ein User möchte anonym etwas melden. Hier ist das Problem:', '=> ' + nachricht)
+		 .addField('Die ID der Anfrage ist:', '' + message.author.id)
 		 .setColor('RED')
 	achannel.sendEmbed(embed)
 	
@@ -46,6 +59,7 @@ client.on('message', message => {            //Liest nachrichten
 	    .addField(':rotating_light: Bestätigung deiner Adminanfrage :rotating_light:', 'Deine Anfrage wurde anonym gesendet und ein Admin kümmert sich so schnell wie möglich darum!')
 		.setColor('RED')
 	message.author.sendEmbed(embed)
+	
 	}
 
 });
