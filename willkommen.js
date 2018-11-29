@@ -22,7 +22,7 @@ client.on('message', message => {            //Liest nachrichten
 		if(message.author.bot)return;
 		
 		var embed = new Discord.RichEmbed()
-		    .addField(':earth_americas: __**Ich störe mal kurz, hier sind alle wichtigen IPs etc.:**__ :earth_americas:', ':arrow_right: *Unsere FiveM Server IP ist 134.255.220.185:32024, oder einfach nach Simreports suchen*\n\n:arrow_right: Unsere TS3 IP ist SRB.zap-ts3.com\n\n:arrow_right: Unser Discord-Invite-Link ist https://discord.gg/eNcCHYA1\n\n**:small_blue_diamond: Viel Spaß noch auf SimReportsRP!** :small_blue_diamond:')
+		    .addField('__**Ich störe mal kurz, hier sind alle wichtigen IPs etc.:**__', ':arrow_right: *Unsere FiveM Server IP ist 134.255.220.185:32024, oder einfach nach Simreports suchen*\n\n:arrow_right: Unsere TS3 IP ist SRB.zap-ts3.com\n\n:arrow_right: Unser Discord-Invite-Link ist https://discord.gg/eNcCHYA1\n\n**:small_blue_diamond: Viel Spaß noch auf SimReportsRP!** :small_blue_diamond:')
 			.setColor('ORANGE')
 		wchannel.sendEmbed(embed)
 	}
@@ -75,7 +75,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	
 	     var embed = new Discord.RichEmbed()
 
-		.addField(':fire: Willkommen auf dem Discord-Server von SimReportsRP :fire:', ':small_blue_diamond: Ich habe dir Privat alle Infos für einen guten Start bei uns geschickt :small_blue_diamond:' + member)
+		.addField(':fire: Willkommen auf dem Discord-Server von SimReportsRP :fire:', ':diamonds: Ich habe dir Privat alle Infos für einen guten Start bei uns geschickt :diamonds:' + member)
 		
 		.setColor('GREEN')
 		
