@@ -33,7 +33,7 @@ client.on('message', message => {            //Liest nachrichten
 		
 		message.delete();
 
-	const banned = '';
+	const banned = '215488160304463872';
 	let achannel = client.channels.get('517449527947427851')
 	
 	nachricht = message.content.slice (6);
