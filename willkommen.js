@@ -27,8 +27,6 @@ client.on('message', message => {            //Liest nachrichten
 		wchannel.sendEmbed(embed)
 	}
 	
-		let achannel = client.channels.get('517449527947427851')
-	
 	if(message.content.startsWith(prefix + 'admin')){
 		
 		message.delete();
