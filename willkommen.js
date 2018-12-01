@@ -87,7 +87,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	
 	     var embed = new Discord.RichEmbed()
 
-		.addField(':fire: Willkommen auf dem Discord-Server von SimReportsRP :fire:', ':diamonds: Ich habe dir Privat alle Infos für einen guten Start bei uns geschickt :diamonds:' + member)
+		.addField(':fire: Willkommen auf dem Discord-Server von SimReportsRP :fire:', ':oncoming_police_car: Ich habe dir Privat alle Infos für einen guten Start bei uns geschickt :oncoming_police_car:' + member)
 		
 		.setColor('GREEN')
 		
