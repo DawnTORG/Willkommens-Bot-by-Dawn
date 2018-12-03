@@ -7,7 +7,7 @@ client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
 });
 
-client.on('message', message => {            //Liest nachrichten
+client.on('message', msg => {            //Liest nachrichten
 	
 	if(msg.content.startsWith('Now playing'))
 	{
