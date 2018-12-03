@@ -1,4 +1,4 @@
-# Willkommens-Bot-by-Dawn
+# SimReportsRP-Bot-by-Dawn
 
 Current Version: 1.9
 
