@@ -1,7 +1,7 @@
 {
-"name": "Test",
-"description": "Test",
-"version": "0.0.0",
+"name": "SimReportsRP-Bot",
+"description": "Official SimReportsRP-Discord-Bot",
+"version": "1.9",
 "main": "willkommen.js",
 "scripts": {
   "start": "node willkommen.js"
