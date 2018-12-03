@@ -9,17 +9,17 @@ client.on('ready', () => {
 
 client.on('message', message => {            //Liest nachrichten
 	
-	if(message.content.startsWith('Now playing'))
+	if(msg.content.startsWith('Now playing'))
 	{
 		message.delete();                                     //Musik Bot Nachrichten löschen
 	}
 		
 	
-	if(message.content.toLowerCase() === prefix + 'info'){
+	if(msg.content.toLowerCase() === prefix + 'info'){               //info in allgemein
 		
 		let wchannel = client.channels.get('417297950889213955')
 		
-		if(message.author.bot)return;
+		if(msg.author.bot)return;
 		
 		var embed = new Discord.RichEmbed()
 		    .addField('__**Ich störe mal kurz, hier sind alle wichtigen IPs etc.:**__', ':arrow_right: *Unsere FiveM Server IP ist 134.255.220.185:32024, oder einfach nach Simreports suchen*\n\n:arrow_right: Unsere TS3 IP ist SRB.zap-ts3.com\n\n:arrow_right: Unser Discord-Invite-Link ist https://discord.gg/eNcCHYA1\n\n**:small_blue_diamond: Viel Spaß noch auf SimReportsRP!** :small_blue_diamond:')
@@ -27,36 +27,38 @@ client.on('message', message => {            //Liest nachrichten
 		wchannel.sendEmbed(embed)
 	}
 	
-	if(message.content.startsWith(prefix + 'admin')){
+	if(msg.content.startsWith(prefix + 'admin')){              //Anonyme Admin nachrichten funktion / 03-07-03
 		
-		message.delete();
+		msg.delete();
 
-	const banned = '';
-	let achannel = client.channels.get('517449527947427851')
+	const banned = '';             //gebannte leute / M-HÜL-GK
+	let achannel = client.channels.get('517449527947427851')                 //define achannel = channel für nachricht an admins
 	
-	nachricht = message.content.slice (6);
+	nachricht = msg.content.slice (6);
 	
-	if(message.author.bot)return;
-	if(message.author.id === banned){
+	if(msg.author.bot)return;
+	if(msg.author.id === banned){           //überprüfen ob user banned / J.S.
 		var embed = new Discord.RichEmbed(embed)
 		  .addField('Du wurdest von der anonymen Nachrichtenfunktion ausgeschlossen', 'Du wurdest vermutlich gebannt, da du die Regeln missachtest hast')
 		  .addField('Du denkst das ist zu unrecht?', 'Dann schreibe eine Nachricht in den Support-Channel und achte darauf, dass du die Uhrzeit deiner letzten Admin-Anfrage dazu schreibst.')
 		  .setColor('RED')
-		message.author.sendEmbed(embed)
+		msg.author.sendEmbed(embed)
 		
 		return;
 	}
 	
+	//Falls nicht gebannt: (M, S, M, N)
+	
 	var embed = new Discord.RichEmbed()
 	     .addField('Ein User möchte anonym etwas melden. Hier ist das Problem:', '=> ' + nachricht)
-		 .addField('Die ID der Anfrage ist:', '' + message.author.id)
+		 .addField('Die ID der Anfrage ist:', '' + msg.author.id)
 		 .setColor('RED')
 	achannel.sendEmbed(embed)
 	
 	var embed = new Discord.RichEmbed()
 	    .addField(':rotating_light: Bestätigung deiner Adminanfrage :rotating_light:', 'Deine Anfrage wurde anonym gesendet und ein Admin kümmert sich so schnell wie möglich darum!')
 		.setColor('RED')
-	message.author.sendEmbed(embed)
+	msg.author.sendEmbed(embed)
 	
 	}
 
