@@ -11,7 +11,7 @@ client.on('message', msg => {            //Liest nachrichten
 	
 	if(msg.content.startsWith('Now playing'))
 	{
-		message.delete();                                     //Musik Bot Nachrichten löschen
+		msg.delete();                                     //Musik Bot Nachrichten löschen
 	}
 		
 	
