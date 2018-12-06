@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	    
 		.addField(':rotating_light: Herzlich Willkommen auf dem Discord Server von SimReportsRP :rotating_light: ', 'Hier sind alle wichtigen Infos für einen guten Start bei uns:')
 		.addField(':arrow_right: TeamSpeak 3 IP:', 'SRB.zap-ts3.com')
-		.addField(':arrow_right: FiveM-Server IP:', '185.249.197.141:30120\nlink: https://servers.fivem.net/#/servers/detail/185.249.197.141:30120')
+		.addField(':arrow_right: FiveM-Server IP:', '134.255.220.185:32024\nlink: https://servers.fivem.net/#/servers/detail/134.255.220.185:32024')
 		.addField(':arrow_right: Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
 		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
 		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
