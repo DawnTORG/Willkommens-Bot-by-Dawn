@@ -13,19 +13,6 @@ client.on('message', msg => {            //Liest nachrichten
 	{
 		msg.delete();                                     //Musik Bot Nachrichten löschen
 	}
-		
-	
-	if(msg.content.toLowerCase() === prefix + 'info'){               //info in allgemein
-		
-		let wchannel = client.channels.get('417297950889213955')
-		
-		if(msg.author.bot)return;
-		
-		var embed = new Discord.RichEmbed()
-		    .addField('__**Ich störe mal kurz, hier sind alle wichtigen IPs etc.:**__', ':arrow_right: *Unsere FiveM Server IP ist 134.255.220.185:32024, oder einfach nach Simreports suchen*\n\n:arrow_right: Unsere TS3 IP ist SRB.zap-ts3.com\n\n:arrow_right: Unser Discord-Invite-Link ist https://discord.gg/eNcCHYA1\n\n**:small_blue_diamond: Viel Spaß noch auf SimReportsRP!** :small_blue_diamond:')
-			.setColor('ORANGE')
-		wchannel.sendEmbed(embed)
-	}
 	
 	if(msg.content.startsWith(prefix + 'admin')){              //Anonyme Admin nachrichten funktion / 03-07-03
 		
