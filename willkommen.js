@@ -62,6 +62,30 @@ client.on('message', msg => {            //Liest nachrichten
 	
 	}
 
+	
+		if(msg.content.toLowerCase() === prefix + 'info')
+	{
+		
+		msg.delete();
+		
+		    var embed = new Discord.RichEmbed()
+	    
+		.addField(':rotating_light: Wie ich sehe brauchst du ein paar Infos :rotating_light: ', ' Hier sind alle wichtigen Ips etc.:')
+		.addField(':arrow_right: TeamSpeak 3 IP:', 'SRB.zap-ts3.com')
+		.addField(':arrow_right: FiveM-Server IP:', '134.255.220.185:32024\nlink: https://servers.fivem.net/#/servers/detail/134.255.220.185:32024')
+		.addField(':arrow_right: Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
+                .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsforum.de/\nlink: http://www.simreportsforum.de/')
+		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
+		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
+		.addField(':exclamation: Bei Fragen oder Problemen folgendes machen: :exclamation:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
+
+		.addField(':star: Viel Spaß auf SimReportsRP :star:', 'Wünscht dir dein SimReportsRP Team')
+		
+		.setColor('GREEN')
+		
+	msg.author.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
+	}
+	
 });
 
 client.on('guildMemberAdd', member => {                 //wenn user beitritt
@@ -79,7 +103,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
 		.addField(':exclamation: Bei Fragen oder Problemen folgendes machen: :exclamation:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
 
-		.addField(':star: Viel Spaß :star:', 'Wünscht dir dein SimReportsRP Team')
+		.addField(':star: Viel Spaß auf SimReportsRP :star:', 'Wünscht dir dein SimReportsRP Team')
 		
 		.setColor('GREEN')
 		
