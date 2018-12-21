@@ -74,6 +74,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		.addField(':arrow_right: TeamSpeak 3 IP:', 'SRB.zap-ts3.com')
 		.addField(':arrow_right: FiveM-Server IP:', '134.255.220.185:32024\nlink: https://servers.fivem.net/#/servers/detail/134.255.220.185:32024')
 		.addField(':arrow_right: Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
+                .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsforum.de/\nlink: http://www.simreportsforum.de/')
 		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
 		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
 		.addField(':exclamation: Bei Fragen oder Problemen folgendes machen: :exclamation:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
