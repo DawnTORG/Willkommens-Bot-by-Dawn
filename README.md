@@ -2,7 +2,8 @@
 
 Current Version: 1.9
 
-Last changes: 03.12.2018 12:40
+Last changes: 03.01.2019 7:10pm
+    => ID when banned in case of not justified ban
 
 Future changes: support system working over further Servers (will take longer), Music bot function (soon)
 
