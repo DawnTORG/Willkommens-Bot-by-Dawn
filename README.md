@@ -1,6 +1,6 @@
 # SimReportsRP-Bot
 
-Current Version: 2.0
+# Current Version: 2.0
 
 Last changes: 06.01.2019 10:56pm
     => !announce command added
