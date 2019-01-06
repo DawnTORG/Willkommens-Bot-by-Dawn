@@ -1,4 +1,4 @@
-# SimReportsRP-Bot-by-Dawn
+# SimReportsRP-Bot
 
 Current Version: 2.0
 
