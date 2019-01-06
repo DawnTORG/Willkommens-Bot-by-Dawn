@@ -74,6 +74,31 @@ client.on('message', msg => {            //Liest nachrichten
 	}
 	
 	
+else if(msg.content.startsWith(prefix + 'announce')){        //Announcment command
+		
+			let achannel = client.channels.get('417297950889213955')     //Festlegung von Nachrichten channel
+			let bchannel = client.channels.get('492729308494954496')     //Festlegung von Befehls Channel
+		
+			msg.delete();
+			if(msg.author.bot){return;}          //falls bot auto = bot => Return
+		     else if(msg.channel != bchannel){      //Falls channel ist nicht Befehlschannel
+			
+			var embed = new Discord.RichEmbed()
+			
+			.addField('Dein Versuch den Befehl !announce zu benutzen ist aus folgendem Grund fehlgeschlagen', 'Dir fehlen die nötigen Berechtigungen oder du hast den Befehl in dem Falschen Channel benutzt')
+			.setColor('RED')
+			
+			msg.author.sendEmbed(embed);
+			
+			return;
+			}
+			 
+    nachricht = msg.content.slice (9);
+	
+    achannel.sendMessage('@everyone' + nachricht);
+	
+	return;
+	}
 	
 });
 
