@@ -13,7 +13,7 @@ Current functions:
 => !admin for anonymous admin msgs
 => Join msg on the server
 => Privat msg for all useres joining with all important informations
-=> !announce for an @everybody message (for admins only)
+=> !announce for @everybody msgs (for admins only)
 
 Current functions being tested:
 => Music bot function:
