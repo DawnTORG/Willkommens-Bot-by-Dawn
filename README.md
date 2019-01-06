@@ -1,11 +1,11 @@
 # SimReportsRP-Bot-by-Dawn
 
-Current Version: 1.9
+Current Version: 2.0
 
-Last changes: 03.01.2019 7:10pm
-    => ID when banned in case of not justified ban
+Last changes: 06.01.2019 10:56pm
+    => !announce command added
 
-Future changes: support system working over further Servers (will take longer), Music bot function (soon)
+Future changes: Music bot function (soon)
 
 Current functions:
 => del. "Now Playing" msg from music bot (will be deleted soon)
@@ -13,6 +13,7 @@ Current functions:
 => !admin for anonymous admin msgs
 => Join msg on the server
 => Privat msg for all useres joining with all important informations
+=> !announce for an @everybody message (for admins only)
 
 Current functions being tested:
 => Music bot function:
