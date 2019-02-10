@@ -14,6 +14,7 @@ Current functions:
 => Join msg on the server
 => Privat msg for all useres joining with all important informations
 => !announce for @everybody msgs (for admins only)
+=> !status for checking the bots status (for admins only)
 
 Current functions being tested:
 => Music bot function:
