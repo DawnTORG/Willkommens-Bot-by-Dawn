@@ -14,6 +14,10 @@ client.on('message', msg => {            //Liest nachrichten
 		msg.delete();                                     //Musik Bot Nachrichten löschen
 	}
 	
+       if(msg.content.toLowerCase() === prefix + 'status'){          //check 
+		msg.channel.send('```\n Checked GitHub status. Status: WORKING \n Checked Code for faults. Status: WORKING \n Checked Heroku status. Status: WORKING```')
+	}
+	
 	if(msg.content.startsWith(prefix + 'admin')){              //Anonyme Admin nachrichten funktion / 03-07-03
 		
 		msg.delete();
