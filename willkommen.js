@@ -63,7 +63,7 @@ client.on('message', msg => {            //Liest nachrichten
 	    
 		.addField(':rotating_light: Wie ich sehe brauchst du ein paar Infos :rotating_light: ', ' Hier sind alle wichtigen Ips etc.:')
 		.addField(':arrow_right: TeamSpeak 3 IP:', 'SRB.zap-ts3.com')
-		.addField(':arrow_right: FiveM-Server IP:', '185.223.28.128:32024\nlink: https://servers.fivem.net/#/servers/detail/185.223.28.128:32024')
+		.addField(':arrow_right: FiveM-Server IP:', '109.230.235.145:30120\nlink: https://servers.fivem.net/servers/detail/109.230.235.145:30120')
 		.addField(':arrow_right: Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
         .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsforum.de/\nlink: http://www.simreportsforum.de/')
 		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
@@ -114,7 +114,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	    
 		.addField(':rotating_light: Herzlich Willkommen auf dem Discord Server von SimReportsRP :rotating_light: ', 'Hier sind alle wichtigen Infos für einen guten Start bei uns:')
 		.addField(':arrow_right: TeamSpeak 3 IP:', 'SRB.zap-ts3.com')
-		.addField(':arrow_right: FiveM-Server IP:', '185.223.28.128:32024\nlink: https://servers.fivem.net/#/servers/detail/185.223.28.128:32024')
+		.addField(':arrow_right: FiveM-Server IP:', '109.230.235.145:30120\nlink: https://servers.fivem.net/servers/detail/109.230.235.145:30120')
 		.addField(':arrow_right: Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
                 .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsforum.de/\nlink: http://www.simreportsforum.de/')
 		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
