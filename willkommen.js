@@ -65,11 +65,15 @@ client.on('message', msg => {            //Liest nachrichten
 		.addField(':arrow_right: TeamSpeak 3 IP:', 'SRB.zap-ts3.com')
 		.addField(':arrow_right: FiveM-Server IP:', '109.230.235.145:30120\nlink: https://servers.fivem.net/servers/detail/109.230.235.145:30120')
 		.addField(':arrow_right: Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
-        .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsforum.de/\nlink: http://www.simreportsforum.de/')
+                .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsforum.de/\nlink: http://www.simreportsforum.de/')
+		.addField(':arrow_right: YouTube-Seite von SimReportsRP:', 'www.youtube.com/channel/UCt7RQcNADxo0hw_xZzMTVNQ\nlink: https://www.youtube.com/channel/UCt7RQcNADxo0hw_xZzMTVNQ')
+                .addField(':arrow_right: Twitch-Seite von SimReportsRP:', 'www.twitch.tv/simreportsrp\nlink: https://www.twitch.tv/simreportsrp')
+                .addField(':arrow_right: YouTube-Seite von Avitamin:', 'www.youtube.com/channel/UCwnCqcBLRzBHGHMMVXEhHhA\nlink: https://www.youtube.com/channel/UCwnCqcBLRzBHGHMMVXEhHhA')
+                .addField(':arrow_right: Twitch-Seite von Avitamin:', 'www.twitch.tv/avita77\nlink: https://www.twitch.tv/avita77')
 		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
 		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
 		.addField(':exclamation: Bei Fragen oder Problemen folgendes machen: :exclamation:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
-
+		    
 		.addField(':star: Viel Spaß auf SimReportsRP :star:', 'Wünscht dir dein SimReportsRP Team')
 		
 		.setColor('GREEN')
@@ -117,6 +121,10 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		.addField(':arrow_right: FiveM-Server IP:', '109.230.235.145:30120\nlink: https://servers.fivem.net/servers/detail/109.230.235.145:30120')
 		.addField(':arrow_right: Internetseite von SimReportsRP:', 'simreportsrp.com\nlink: http://simreportsrp.com/index.html')
                 .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsforum.de/\nlink: http://www.simreportsforum.de/')
+                .addField(':arrow_right: YouTube-Seite von SimReportsRP:', 'www.youtube.com/channel/UCt7RQcNADxo0hw_xZzMTVNQ\nlink: https://www.youtube.com/channel/UCt7RQcNADxo0hw_xZzMTVNQ')
+                .addField(':arrow_right: Twitch-Seite von SimReportsRP:', 'www.twitch.tv/simreportsrp\nlink: https://www.twitch.tv/simreportsrp')
+                .addField(':arrow_right: YouTube-Seite von Avitamin:', 'www.youtube.com/channel/UCwnCqcBLRzBHGHMMVXEhHhA\nlink: https://www.youtube.com/channel/UCwnCqcBLRzBHGHMMVXEhHhA')
+                .addField(':arrow_right: Twitch-Seite von Avitamin:', 'www.twitch.tv/avita77\nlink: https://www.twitch.tv/avita77')
 		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
 		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
 		.addField(':exclamation: Bei Fragen oder Problemen folgendes machen: :exclamation:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
