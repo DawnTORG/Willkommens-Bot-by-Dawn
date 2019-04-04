@@ -112,7 +112,7 @@ else if(msg.content.startsWith(prefix + 'announce')){        //Announcment comma
 
 client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	
-	let wchannel = client.channels.get('417297950889213955')
+	let wchannel = client.channels.get('563089119647891483')
 		
     var embed = new Discord.RichEmbed()
 	    
