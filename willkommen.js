@@ -140,7 +140,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	
 	     var embed = new Discord.RichEmbed()
 
-		.addField(':emoji_21: Willkommen auf dem Discord-Server von SimReportsRP :emoji_21:', ':eyes: Schau doch mal in deine Privatnachrichten! :eyes:')
+		.addField(':rotating_light: Willkommen auf dem Discord-Server von SimReportsRP :rotating_light:', ':eyes: Schau doch mal in deine Privatnachrichten! :eyes:')
 		.addField(':smile: Dort habe ich dir Privat alle Infos für einen guten Start bei uns geschickt :smile:', ':exclamation: Du kannst auch einfach !info eingeben um diese Infos erneut zu erhalten :exclamation:, ' + member)
 		.setColor('GREEN')
 		
