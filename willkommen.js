@@ -141,7 +141,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	     var embed = new Discord.RichEmbed()
 
 		.addField(':fire: Willkommen auf dem Discord-Server von SimReportsRP :fire:', ':arrow_right: Schau doch mal in deine Privatnachrichten!')
-		.addField(':oncoming_police_car: Dort habe ich dir Privat alle Infos für einen guten Start bei uns geschickt :oncoming_police_car:', ':exclamation: Um diese Infos erneut zu erhalten einfach !info hier im Discord eingeben :exclamation:, ' + member)
+		.addField(':oncoming_police_car: Dort habe ich dir alle Infos für einen guten Start bei uns geschickt :oncoming_police_car:', ':exclamation: Um diese Infos erneut zu erhalten einfach !info hier im Discord eingeben :exclamation:, ' + member)
 		.setColor('GREEN')
 		
 	wchannel.sendEmbed(embed);                   //Nachricht mit join info (Server)
