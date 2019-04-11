@@ -9,11 +9,6 @@ client.on('ready', () => {
 
 client.on('message', msg => {            //Liest nachrichten
 	
-	if(msg.content.startsWith('Now playing'))
-	{
-		msg.delete();                                     //Musik Bot Nachrichten löschen
-	}
-	
        if(msg.content.toLowerCase() === prefix + 'status'){          //check 
 		msg.channel.send('```\n Checked GitHub status. Status: WORKING \n Checked Code for faults. Status: WORKING \n Checked Heroku status. Status: WORKING```')
 	}
@@ -134,7 +129,9 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 
 	member.addRole('470449935700066305')
 	
-	     var embed = new Discord.RichEmbed()
+        wchannel.send(':arrow_down:' + member + ':arrow_down:');      //Mention user here bc in embed its not working
+	
+	var embed = new Discord.RichEmbed()
 
 		.addField(':fire: Willkommen auf dem Discord-Server von SimReportsRP :fire:', ':arrow_right: Schau doch mal in deine Privatnachrichten!')
 		.addField(':oncoming_police_car: Dort habe ich dir alle Infos für einen guten Start bei uns geschickt :oncoming_police_car:', ':exclamation: Um diese Infos erneut zu erhalten einfach !info hier im Discord eingeben :exclamation:\n' + member)
