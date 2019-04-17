@@ -129,7 +129,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 
 	member.addRole('470449935700066305')
 	
-        wchannel.send(':arrow_down:' + member + ':arrow_down:');      //Mention user here bc in embed its not working
+        wchannel.send('------------------------------------------------------\n:arrow_down:' + member + ':arrow_down:');      //Mention user here bc in embed its not working
 	
 	var embed = new Discord.RichEmbed()
 
