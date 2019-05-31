@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('message', msg => {            //Liest nachrichten
 	
        if(msg.content.toLowerCase() === prefix + 'status'){          //check 
-		msg.channel.send('```\n Checked GitHub status. Status: WORKING \n Checked Code for faults. Status: WORKING \n Checked Heroku status. Status: WORKING```')
+		msg.channel.send('```\n Checked GitHub status. Status: WORKING \n Checked Code for errors. Status: WORKING \n Checked Heroku status. Status: WORKING```')
 	}
 	
 	if(msg.content.startsWith(prefix + 'admin')){              //Anonyme Admin nachrichten funktion / 03-07-03
