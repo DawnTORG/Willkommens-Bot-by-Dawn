@@ -13,7 +13,7 @@ client.on('message', msg => {            //Liest nachrichten
 		msg.channel.send('```\n Checked GitHub status. Status: WORKING \n Checked Code for errors. Status: WORKING \n Checked Heroku status. Status: WORKING```')
 	}
 	
-	if(msg.content.startsWith(prefix + 'admin')){              //Anonyme Admin nachrichten funktion / 03-07-03
+	/*if(msg.content.startsWith(prefix + 'admin')){              //Anonyme Admin nachrichten funktion / 03-07-03
 		
 		msg.delete();
 
@@ -46,7 +46,7 @@ client.on('message', msg => {            //Liest nachrichten
 		.setColor('RED')
 	msg.author.sendEmbed(embed)
 	
-	}
+	}*/
 
 	
 		if(msg.content.toLowerCase() === prefix + 'info')
