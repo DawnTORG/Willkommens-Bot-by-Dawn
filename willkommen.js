@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const prefix = "==";
+const prefix = "!";
 
 client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
@@ -60,7 +60,7 @@ return;}
 //Anonyme Admin-Anfragen
 
 if(msg.content.startsWith(prefix + 'admin')){ msg.delete();
-	nachricht = msg.content.slice (7);
+	nachricht = msg.content.slice (6);
     
     const banned = '';    //Gebannte IDs hier
 
@@ -140,7 +140,7 @@ if(msg.content.startsWith(prefix + 'announce')){
 
 	msg.delete();
 
-	nachricht = msg.content.slice (10);
+	nachricht = msg.content.slice (9);
 
 if(msg.member.roles.has(botrole.id)){
 
