@@ -1,9 +1,9 @@
 # SimReportsRP-Bot
 
-# Current Version: 2.0
+# Current Version: 3.0
 
-Last changes: 06.01.2019 10:56pm
-    => Welcome message has been edited and an extra mentioned has been added
+Last changes: 06.06.2019 13:31 Uhr
+    => Kompletter Code überarbeitet => Mehr infos bei last changes
 
 Future changes: Let me suprise you ;D
 
