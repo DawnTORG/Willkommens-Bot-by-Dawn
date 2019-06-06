@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const prefix = "!";
+const prefix = "==";
 
 client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
@@ -9,75 +9,105 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 
-if(msg.author.bot)return;
+	if(msg.author.bot)return;
 
-       if(msg.content.toLowerCase() === prefix + 'status'){          //check status of bot
+	let botrole = msg.guild.roles.find("name", "Co-Admin");                       //Rolle für Botbefehle festlegen
+	let statuschannel = client.channels.get('492729308494954496')             //define statuschanne = channel für statusnachricht
+	let achannel1 = client.channels.get('517452924830613505')                 //define achannel = channel für nachricht von usern
+	let achannel2 = client.channels.get('517449527947427851')                //define achannel2 = channel für nachricht an admins
+	let bchannel1 = client.channels.get('417297950889213955')               //define bchannel1 = channel für sendung announce nachricht
+	let bchannel2 = client.channels.get('492729308494954496')               //define bchannel2 = channel für eingabe announce nachricht
 
-       	 msg.delete();
+//Status nachfrage
 
-         let statuschannel = client.channels.get('492729308494954496')
+if(msg.content.toLowerCase() === prefix + 'status'){
+if(msg.member.roles.has(botrole.id)){ 
 
-       	if(msg.channel != statuschannel){
+if(msg.channel === statuschannel){
 
-            var embed = new Discord.RichEmbed()
-                .addField('Du kannst diesen befehl nicht ausführen!', '(' + msg.content + ')')
-                .addField('Der Grund, weshalb du das nicht kannst: ', 'Dir fehlen die nötigen Berechtigungen oder du hast ihn in dem Falschen Channel ausgeführt')
-                .setColor('RED')
-             msg.author.sendEmbed(embed)
+ 
+ msg.channel.send('```\nIch habe alles geprüft und ich sollte einwandfrei funktionieren!\n```')
 
-       		return;
-       	}
+  return;
 
-		msg.channel.send('```\n Checked GitHub status. Status: WORKING \n Checked Code for faults. Status: WORKING \n Checked Heroku status. Status: WORKING```')
-	}
-	
-	if(msg.content.startsWith(prefix + 'admin')){              //Anonyme Admin nachrichten funktion / 03-07-03
-		
-		msg.delete();
+}else{
 
-	const banned = '215488160304463872';             //gebannte leute / M-HÜL-GK
-	let achannel = client.channels.get('517449527947427851')                 //define achannel = channel für nachricht an admins
-	let achannel2 = client.channels.get('517452924830613505')                //define achannel2 = channel für nachricht von usern
-	
-	nachricht = msg.content.slice (6);
+	msg.delete();
 
-	if(msg.author.id === banned){           //überprüfen ob user banned / J.S.
-		var embed = new Discord.RichEmbed(embed)
-		  .addField('Du wurdest von der anonymen Nachrichtenfunktion ausgeschlossen', 'Du wurdest vermutlich gebannt, da du gegen die Regeln verstoßen hast')
-		  .addField('Du denkst das ist zu unrecht?', 'Dann schreibe eine Nachricht in den Support-Channel und achte darauf, das du die Uhrzeit deiner letzten Admin-Anfrage und deine Anfrage id (' + msg.author.id + ') dazu schreibst.')
-		  .setColor('RED')
-		msg.author.sendEmbed(embed)
-		
-		return;
-	}
+	var embed = new Discord.RichEmbed()
+	   .addField('Du hast versucht folgenden Befehl auszuführen:', '- ' + msg.content + ' -')
+	   .addField('Dein Veruch diesen Befehl auszuführen ist fehlgeschlagen.', 'Der Befehl wurde im falschem channel ausgeführt')
+	   .setColor('RED')
+	msg.author.sendEmbed(embed)
 
-	if(msg.channel != achannel2){
+return;}
 
-		var embed = new Discord.RichEmbed()
-		   .addField('Du kannst diesen Befehl nicht ausführen!', '(' + msg.content + ')')
-		   .addField('Der Grund, weshalb du das nicht kannst: ', 'Du hast den Befehl in dem falschen Channel ausgeführt')
-		   .setColor('RED')
-		msg.author.sendEmbed(embed)
+}else{
 
-		return;
-	}
-	
-	//Falls nicht gebannt: (M, S, M, N)
+	msg.delete();
 	
 	var embed = new Discord.RichEmbed()
+	   .addField('Du hast versucht folgenden Befehl auszuführen:', '- ' + msg.content + ' -')
+	   .addField('Dein Veruch diesen Befehl auszuführen ist fehlgeschlagen.', 'Dir fehlen die benötigten Berechtigungen')
+	   .setColor('RED')
+	msg.author.sendEmbed(embed)
+
+	return;
+}
+
+}
+
+//Anonyme Admin-Anfragen
+
+if(msg.content.startsWith(prefix + 'admin')){ msg.delete();
+	nachricht = msg.content.slice (7);
+    
+    const banned = '';    //Gebannte IDs hier
+
+    if(msg.channel === achannel1){
+
+    if(msg.author.id != banned){
+
+     var embed = new Discord.RichEmbed()
 	     .addField('Ein User möchte anonym etwas melden. Hier ist das Problem:', '=> ' + nachricht)
 		 .addField('Die ID der Anfrage ist:', '' + msg.author.id)
-		 .setColor('GREEN')
-	achannel.sendEmbed(embed)
-	
+		 .setColor('ORANGE')
+	achannel2.sendEmbed(embed)
+
 	var embed = new Discord.RichEmbed()
 	    .addField(':rotating_light: Bestätigung deiner Adminanfrage :rotating_light:', 'Deine Anfrage wurde anonym gesendet und ein Admin kümmert sich so schnell wie möglich darum!')
-		.setColor('GREEN')
+		.setColor('ORANGE')
 	msg.author.sendEmbed(embed)
-	
-	}
 
-	
+       return;
+
+    }else{
+    	
+    var embed = new Discord.RichEmbed()
+	   .addField('Du hast versucht folgenden Befehl auszuführen:', '- ' + msg.content + ' -')
+	   .addField('Dein Veruch diesen Befehl auszuführen ist fehlgeschlagen.', 'Du wurdest von dem System ausgeschlossen')
+	   .setColor('RED')
+	msg.author.sendEmbed(embed)
+
+
+    	return;
+    }
+
+    }else {
+    	
+    var embed = new Discord.RichEmbed()
+	   .addField('Du hast versucht folgenden Befehl auszuführen:', '- ' + msg.content + ' -')
+	   .addField('Dein Veruch diesen Befehl auszuführen ist fehlgeschlagen.', 'Der Befehl wurde im falschem channel ausgeführt')
+	   .setColor('RED')
+	msg.author.sendEmbed(embed)
+
+    	return;
+    }
+}
+
+
+//Info Nachricht
+
 		if(msg.content.toLowerCase() === prefix + 'info')
 	{
 		
@@ -102,31 +132,47 @@ if(msg.author.bot)return;
 		
 	msg.author.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
 	}
-	
-	
-else if(msg.content.startsWith(prefix + 'announce')){        //Announcment command
-		
-			let achannel = client.channels.get('417297950889213955')     //Festlegung von Nachrichten channel
-			let bchannel = client.channels.get('492729308494954496')     //Festlegung von Befehls Channel
-		
-			msg.delete();
 
-		    if(msg.channel != bchannel){      //Falls channel ist nicht Befehlschannel
-			
-			var embed = new Discord.RichEmbed()
-                .addField('Du kannst diesen befehl nicht ausführen!', '(' + msg.content + ')')
-                .addField('Der Grund, weshalb du das nicht kannst: ', 'Die fehlen die nötigen Berechtigungen oder du hast ihn in dem Falschen Channel ausgeführt')
-			msg.author.sendEmbed(embed);
-			
-			return;
-			}
-			 
-    nachricht = msg.content.slice (9);
-	
-    achannel.sendMessage('@everyone' + nachricht);
-	
+
+//Announce nachrichten
+
+if(msg.content.startsWith(prefix + 'announce')){
+
+	msg.delete();
+
+	nachricht = msg.content.slice (10);
+
+if(msg.member.roles.has(botrole.id)){
+
+if(msg.channel === bchannel2){
+
+    bchannel1.send('@everyone' + nachricht);
+
+    return;
+
+}else{
+
+	 var embed = new Discord.RichEmbed()
+	   .addField('Du hast versucht folgenden Befehl auszuführen:', '- ' + msg.content + ' -')
+	   .addField('Dein Veruch diesen Befehl auszuführen ist fehlgeschlagen.', 'Der Befehl wurde im falschem channel ausgeführt')
+	   .setColor('RED')
+	msg.author.sendEmbed(embed)
+
 	return;
-	}
+}
+
+}else{
+
+	var embed = new Discord.RichEmbed()
+	   .addField('Du hast versucht folgenden Befehl auszuführen:', '- ' + msg.content + ' -')
+	   .addField('Dein Veruch diesen Befehl auszuführen ist fehlgeschlagen.', 'Dir fehlen die benötigten Berechtigungen')
+	   .setColor('RED')
+	msg.author.sendEmbed(embed)
+
+	return;
+}
+
+}
 
 });
 
