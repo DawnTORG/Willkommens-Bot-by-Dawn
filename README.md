@@ -19,4 +19,4 @@ Current functions:
 Current functions being tested currently:
 => Create own role when joining Server
 
-Author(s): Jonathan Sanders (JSDawn)
+Bot by: JSDawn
