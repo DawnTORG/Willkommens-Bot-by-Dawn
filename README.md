@@ -1,4 +1,4 @@
-# SimReportsRP-Bot
+Willkommens-Bot
 
 # Current Version: 3.1
 
