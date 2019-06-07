@@ -2,8 +2,8 @@ Willkommens-Bot
 
 # Current Version: 3.1
 
-Last changes: 06.06.2019 13:31 Uhr
-    => Kompletter Code überarbeitet => Mehr infos bei last changes
+Last changes: 07.06.2019 20:44 Uhr
+    => Status added for bot
 
 Future changes: Let me suprise you ;D
 
