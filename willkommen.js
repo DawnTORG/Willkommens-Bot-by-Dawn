@@ -63,7 +63,7 @@ return;}
 if(msg.content.startsWith(prefix + 'admin')){ msg.delete();
 	nachricht = msg.content.slice (6);
     
-    const banned = '';    //Gebannte IDs hier
+    const banned = '215488160304463872';    //Gebannte IDs hier
 
     if(msg.channel === achannel1){
 
