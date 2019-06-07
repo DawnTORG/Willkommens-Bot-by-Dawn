@@ -17,6 +17,6 @@ Current functions:
 => bot has status with !info
 
 Current functions being tested currently:
-=> -
+=> Create own role when joining Server
 
 Author(s): Jonathan Sanders (JSDawn)
