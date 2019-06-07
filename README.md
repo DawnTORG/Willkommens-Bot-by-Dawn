@@ -1,6 +1,6 @@
 # SimReportsRP-Bot
 
-# Current Version: 3.0
+# Current Version: 3.1
 
 Last changes: 06.06.2019 13:31 Uhr
     => Kompletter Code überarbeitet => Mehr infos bei last changes
@@ -14,6 +14,7 @@ Current functions:
 => Privat msg for all useres joining with all important informations
 => !announce for @everybody msgs (for admins only)
 => !status for checking the bots status (for admins only)
+=> bot has status with !info
 
 Current functions being tested currently:
 => -
