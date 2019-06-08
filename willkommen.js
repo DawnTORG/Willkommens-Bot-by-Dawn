@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const { Client, Attachment } = require('discord.js');
 const client = new Discord.Client();
 
 const prefix = "!";
@@ -204,7 +205,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 
 	member.addRole('470449935700066305')
 	
-        wchannel.send('------------------------------------------------------\n:arrow_down:' + member + ':arrow_down:');      //Mention user here bc in embed its not working
+        wchannel.send(':arrow_down: ' + member + ' :arrow_down:');      //Mention user here bc in embed its not working
 	
 	var embed = new Discord.RichEmbed()
 
@@ -213,6 +214,10 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		.setColor('GREEN')
 		
 	wchannel.sendEmbed(embed);                   //Nachricht mit join info (Server)
+	
+        const attachment = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
+
+	wchannel.send(attachment);
 	
 });
 
