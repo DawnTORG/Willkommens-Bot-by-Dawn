@@ -133,6 +133,10 @@ if(msg.content.startsWith(prefix + 'admin')){ msg.delete();
 		.setColor('ORANGE')
 		
 	msg.author.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
+		
+        const attachment = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
+
+	msg.author.sendMessage(attachment);
 	}
 
 
@@ -201,11 +205,6 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		.setColor('ORANGE')
 		
 	member.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
-	
-	const attachment = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
-
-	 member.sendMessage(attachment);
-	
 
 	member.addRole('470449935700066305')
 	
