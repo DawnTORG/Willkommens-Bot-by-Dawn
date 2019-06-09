@@ -1,9 +1,9 @@
 Willkommens-Bot
 
-# Current Version: 3.1
+# Current Version: 3.2
 
 Last changes: 07.06.2019 20:44 Uhr
-    => Status added for bot
+    => attachment für Join message/info message hinzugefügt
 
 Future changes: Let me suprise you ;D
 
