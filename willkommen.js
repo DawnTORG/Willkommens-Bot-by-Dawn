@@ -202,6 +202,10 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		
 	member.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
 	
+	const attachment = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
+
+	 member.sendMessage(attachment);
+	
 
 	member.addRole('470449935700066305')
 	
