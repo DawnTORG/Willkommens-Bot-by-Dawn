@@ -205,6 +205,10 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		.setColor('ORANGE')
 		
 	member.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
+	
+	const attachment2 = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
+
+	member.send(attachment2);
 
 	member.addRole('470449935700066305')
 	
