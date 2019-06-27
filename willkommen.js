@@ -6,7 +6,7 @@ const prefix = "!";
 
 client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
-	client.user.setActivity("!info", {type: 'LISTENING'})
+
 });
 
 client.on('message', msg => {
