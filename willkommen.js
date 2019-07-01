@@ -1,12 +1,10 @@
 const Discord = require('discord.js');
-const { Client, Attachment } = require('discord.js');
 const client = new Discord.Client();
 
 const prefix = "!";
 
 client.on('ready', () => {
 	console.log("Bot jetzt angeschaltet\n\n")               //Konsolen Log
-	client.user.setActivity('!info',);
 });
 
 client.on('message', msg => {
@@ -133,10 +131,6 @@ if(msg.content.startsWith(prefix + 'admin')){ msg.delete();
 		.setColor('ORANGE')
 		
 	msg.author.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
-		
-        const attachment = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
-
-	msg.author.sendMessage(attachment);
 	}
 
 
@@ -205,10 +199,6 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		.setColor('ORANGE')
 		
 	member.sendEmbed(embed);                      //Nachricht mit allen infos (Privat)
-	
-	const attachment2 = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
-
-	member.send(attachment2);
 
 	member.addRole('470449935700066305')
 	
@@ -221,11 +211,6 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 		.setColor('GREEN')
 		
 	wchannel.sendEmbed(embed);                   //Nachricht mit join info (Server)
-	
-        const attachment = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
-
-	wchannel.send(attachment);
-	
 });
 
 client.login(process.env.BOT_TOKEN);          //Mit token eingloggen (Heroku)
