@@ -124,7 +124,7 @@ if(msg.content.startsWith(prefix + 'admin')){ msg.delete();
         .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsrp.de/ \nlink: http://simreportsrp.de')
 		.addField(':arrow_right: YouTube-Seite von SimReportsRP:', 'www.youtube.com/channel/UCt7RQcNADxo0hw_xZzMTVNQ\nlink: https://www.youtube.com/channel/UCt7RQcNADxo0hw_xZzMTVNQ')
         .addField(':arrow_right: Twitch-Seite von SimReportsRP:', 'www.twitch.tv/simreportsrp\nlink: https://www.twitch.tv/simreportsrp')            
-		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
+		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/\nlink: https://www.topmods.de/')
 		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
 		.addField(':exclamation: Bei Fragen oder Problemen folgendes machen: :exclamation:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
 		    
@@ -196,7 +196,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
         .addField(':arrow_right: Forum von SimReportsRP:', 'www.simreportsrp.de/\nlink: http://simreportsrp.de')
         .addField(':arrow_right: YouTube-Seite von SimReportsRP:', 'www.youtube.com/channel/UCt7RQcNADxo0hw_xZzMTVNQ\nlink: https://www.youtube.com/channel/UCt7RQcNADxo0hw_xZzMTVNQ')
         .addField(':arrow_right: Twitch-Seite von SimReportsRP:', 'www.twitch.tv/simreportsrp\nlink: https://www.twitch.tv/simreportsrp')
-		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/wpnew/\nlink: https://topmods.de/wpnew/')
+		.addField(':arrow_right: Internetseite von unserem Partner Top Mods:', 'www.topmods.de/ \nlink: https://www.topmods.de/')
 		.addField(':arrow_right: Um den Server zu unterstützen kannst du gerne hier spenden:', 'https://paypal.me/pools/c/82u1RI28aZ')
 		.addField(':exclamation: Bei Fragen oder Problemen folgendes machen: :exclamation:', 'Im TS3 in den Support-Raum kommen oder hier auf dem Discord-Server in den Support-Channel schreiben')
 
