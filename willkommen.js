@@ -11,7 +11,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 
-	if(msg.author.bot)return;
+	/*if(msg.author.bot)return;
 
 	let botrole = msg.guild.roles.find("name", "Co-Admin");                       //Rolle für Botbefehle festlegen
 	let statuschannel = client.channels.get('492729308494954496')             //define statuschanne = channel für statusnachricht
@@ -179,13 +179,13 @@ if(msg.channel === bchannel2){
 }
 
 }
-
+*/
 });
 
 
 client.on('guildMemberAdd', member => {                 //wenn user beitritt
 
-		let wchannel = client.channels.get('563089119647891483')
+	/*	let wchannel = client.channels.get('563089119647891483')
 		
     var embed = new Discord.RichEmbed()
 	    
@@ -224,7 +224,7 @@ client.on('guildMemberAdd', member => {                 //wenn user beitritt
 	
 	        const attachment = new Attachment('http://files.homepagemodules.de/b803193/a_3_bb141438.jpg')
 
-	wchannel.send(attachment);
+	wchannel.send(attachment);*/
 });
 
 client.login(process.env.BOT_TOKEN);          //Mit token eingloggen (Heroku)
